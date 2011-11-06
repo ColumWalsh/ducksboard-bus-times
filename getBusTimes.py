@@ -40,8 +40,8 @@ link1="12378"
 link2="12380"
 link3="12379"
 api="6xp73lqdgk30ap2c72o9c4imsvtv5a03omwi8256mch1cbq6gp"
-s = sched.scheduler(time.time, time.sleep)
 
+s = sched.scheduler(time.time, time.sleep)
 
 def get_bus_times(bus, stop):
     busStr=str(bus)+'\\\\'
@@ -72,7 +72,6 @@ def get_bus_times(bus, stop):
                     times.append(hourmin-currtime)
     if len(times)==0:
         print 'bus '+bus+' not found at stop ' + stop +' at ' + str(time.gmtime()[3]) +":" + str(time.gmtime()[4]) 
-    print 'spacer'
     times.sort()
     #to prevent list out of bounds, add 0 to the end of times
     times.append(0)
